@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sinatra | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/sinatra/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[用Sinatra建置高效能與高自訂性的系統 - RubyConf Taiwan 2011]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/28/yong-sinatrajian-zhi-gao-xiao-neng-yu-gao-zi-ding-xing-de-xi-tong-rubyconf-taiwan-2011/"/>
+    <updated>2011-10-28T15:01:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/28/yong-sinatrajian-zhi-gao-xiao-neng-yu-gao-zi-ding-xing-de-xi-tong-rubyconf-taiwan-2011</id>
+    <content type="html"><![CDATA[<iframe src="http://player.vimeo.com/video/30127067?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+<p><a href="http://vimeo.com/groups/7974/videos/30127067">用Sinatra建置高效能與高自訂性的系統 - RubyConf Taiwan 2011</a> from <a href="http://vimeo.com/ihower">ihower</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+]]></content>
+  </entry>
+  
+</feed>

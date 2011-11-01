@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Tumblr, | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/tumblr-/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[custom domains for your tumblr]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/11/01/custom-domains-for-your-tumblr/"/>
+    <updated>2011-11-01T13:05:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/11/01/custom-domains-for-your-tumblr</id>
+    <content type="html"><![CDATA[<h3>首先</h3>
+
+<p>先確認你可以管理你的DNS</p>
+
+<hr />
+
+<h3>再來</h3>
+
+<p>到DNS管理介面，去新增加一筆a-record，例如：</p>
+
+<pre><code>tumblr  A       72.32.231.8
+</code></pre>
+
+<p><code>切記!!!不能用cname方式來做</code></p>
+
+<p>詳細說明參考<a href="http://www.tumblr.com/docs/en/custom_domains">這裡</a></p>
+
+<hr />
+
+<h3>然後到Tumblr新增加Use a custom domain name</h3>
+
+<pre><code>http://www.tumblr.com/blog/這裡輸入你的名字/settings
+</code></pre>
+
+<p>輸入之後，然後儲存即可</p>
+
+<hr />
+
+<h3>最後，驗證</h3>
+
+<p><a href="http://www.tumblr.com/check_domain">http://www.tumblr.com/check_domain</a></p>
+]]></content>
+  </entry>
+  
+</feed>

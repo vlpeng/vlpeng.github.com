@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A-note-for-Octopress]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/12/a-note-for-octopress/"/>
+    <updated>2011-10-12T18:33:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/12/a-note-for-octopress</id>
+    <content type="html"><![CDATA[<p><div><script src='https://gist.github.com/1280760.js?file='></script>
+<noscript><pre><code>===Install Octopress===
+
+git clone git://github.com/imathis/octopress.git
+cd octopress
+gem install bundler rake
+bundle install
+rake install
+
+
+
+===Start Blogging===
+
+rake new_post[&quot;title&quot;]
+rake generate
+rake watch
+rake preview
+
+
+
+===Deploy Github===
+
+rake setup_github_pages
+git@github.com:name/Repository.git
+rake generate
+rake deploy
+git add .
+git commit -am 'your message'
+git push origin source
+
+
+===Create CNAME===
+# in your name server, add below
+A    blog.octopress.com     207.97.227.245
+
+# Go to source folder and create CNAME files which contain your domain name (without http://)
+blog.octopress.com</code></pre></noscript></div>
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[imathis' help]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/12/new-post/"/>
+    <updated>2011-10-12T03:57:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/12/new-post</id>
+    <content type="html"><![CDATA[<p>Thank you Brandon Mathis for the prompt help, really appreciate that. :)</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Zynga | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/zynga/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Zynga-Project-Z]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/12/zynga-project-z/"/>
+    <updated>2011-10-12T19:00:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/12/zynga-project-z</id>
+    <content type="html"><![CDATA[<p><blockquote><p>Evil Empire</p><footer><strong>36kr</strong><cite><a href='http://www.36kr.com/p/52294.html'>Zynga vs Facebook Project Z</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

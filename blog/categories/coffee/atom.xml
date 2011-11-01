@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: coffee | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/coffee/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[20111101 new coffee bean]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/11/02/20111101-new-coffee-bean/"/>
+    <updated>2011-11-02T01:13:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/11/02/20111101-new-coffee-bean</id>
+    <content type="html"><![CDATA[<h4>尼加拉瓜 聖胡安莊園 可可之河</h4>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6302890470/" title="2011-11-01 23.16.39.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6238/6302890470_4e1c983e61_b.jpg" width="1024" height="768" alt="2011-11-01 23.16.39.jpg"></a></p>
+
+<hr />
+
+<h4>耶加雪夫 G2 咖啡生豆 KOKE合作社</h4>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6302891454/" title="2011-11-01 23.30.47.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6094/6302891454_f60f70f5b8_b.jpg" width="1024" height="768" alt="2011-11-01 23.30.47.jpg"></a></p>
+
+<hr />
+
+<h4>PWN G1 曼特寧</h4>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6302380281/" title="2011-11-01 23.52.24.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6098/6302380281_1f798a20ba_b.jpg" width="1024" height="768" alt="2011-11-01 23.52.24.jpg"></a></p>
+]]></content>
+  </entry>
+  
+</feed>

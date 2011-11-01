@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: node.js | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/node-js/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5與Node.js在台灣聯合技術小聚 20110917 @appWorks 錄影]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/28/html5yu-node-dot-jszai-tai-wan-lian-he-ji-shu-xiao-ju-20110917-at-appworks-lu-ying/"/>
+    <updated>2011-10-28T16:56:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/28/html5yu-node-dot-jszai-tai-wan-lian-he-ji-shu-xiao-ju-20110917-at-appworks-lu-ying</id>
+    <content type="html"><![CDATA[<h3>當天的錄影 <a href="http://blog.labin.cc/?p=1195">複習一下這六個主題</a></h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Timezone Caculator]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/14/timezone-caculator/"/>
+    <updated>2011-10-14T15:17:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/14/timezone-caculator</id>
+    <content type="html"><![CDATA[<p><blockquote><p>Finding out the actual time difference between two places in the world is hard. There are online converters that can do that for you but their user experience sucks. I always wondered why someone wont fix this  until I ultimately decided to try myself.</p><footer><strong>Filip Hracek</strong><cite><a href='http://www.tmzns.com/'>Timezone Caculator</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[World Wide Map in Node.js and HTML5]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/13/world-wide-map-in-html5/"/>
+    <updated>2011-10-13T13:04:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/13/world-wide-map-in-html5</id>
+    <content type="html"><![CDATA[<p><blockquote><p>This site is recorded the world wide agendas.</p><footer><strong>Development Seed</strong><cite><a href='http://developmentseed.org'>World Wide Map and Agenda in Node.js</a></cite></footer></blockquote></p>
+]]></content>
+  </entry>
+  
+</feed>

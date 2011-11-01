@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RoR-Installation-Guide]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/12/ror-installation-guide/"/>
+    <updated>2011-10-12T18:34:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/12/ror-installation-guide</id>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>===Step1===&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>!/bin/bash&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sudo apt-get install chkconfig sysv-rc-conf vim openssh-server curl build-essential zlib1g-dev libssl-dev libreadline5-dev git-core mysql-client mysql-server libreadline-ruby libruby libopenssl-ruby sqlite3 libsqlite3-ruby libsqlite-dev libsqlite3-dev mysql-common libmysqlclient16-dev libxslt1-dev libxml2-dev libmysqlclient16-dev &amp;&amp; ssh-keygen -t rsa -C "vlpeng@yahoo.com" &amp;&amp; bash &lt; &lt;(curl -s https://rvm.beginrescueend.com/install/rvm) &amp;&amp; echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>===Step2===&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>!/bin/bash&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sudo echo 'text/x-ruby-source rhtml html.erb erb' >> /etc/mime.types &amp;&amp; sudo echo 'text/x-eruby rjs' >> /etc/mime.types &amp;&amp; sudo echo 'text/x-yaml yml yaml' >> /etc/mime.types&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>===Step3===&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>!/bin/bash&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>rvm install bamboo-ree-1.8.7 &amp;&amp; rvm install 1.9.2 &amp;&amp; rvm install 1.8.7 &amp;&amp; rvm use 1.8.7 &amp;&amp; gem update --system &amp;&amp; gem install rails radiant sqlite3-ruby heroku taps rack bundler cucumber-rails database_cleaner webrat rspec rspec-rails ZenTest cucumber-rails database_cleaner webrat rspec rspec-rails ZenTest cucumber-rails vmc engineyard-dns engineyard eycap jekyll jekyll_and_hyde rack-jekyll shining showoff-io nokogiri mysql --no-rdoc --no-ri &amp;&amp; rvm use default ruby-1.9.2-p290</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

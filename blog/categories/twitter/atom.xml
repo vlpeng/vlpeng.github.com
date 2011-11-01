@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: twitter | ALU Octopress Blog]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/twitter/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2011-11-02T01:22:29+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vlpeng Twitter Cloud]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/10/15/vlpeng-twitter-cloud/"/>
+    <updated>2011-10-15T16:02:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/10/15/vlpeng-twitter-cloud</id>
+    <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/vlpeng/6245398181/" title="vlpeng tweetcloud by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6233/6245398181_afb3a4d88f.jpg" width="466" height="390" alt="vlpeng tweetcloud"></a></p>
+]]></content>
+  </entry>
+  
+</feed>
