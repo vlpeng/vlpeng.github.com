@@ -4,7 +4,7 @@
   <title><![CDATA[ALU Octopress Blog]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2011-11-03T01:20:23+08:00</updated>
+  <updated>2011-11-03T01:33:15+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress comment can not show out Disqus normally]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/11/03/octopress-comment-can-not-show-out-disqus-normally/"/>
+    <updated>2011-11-03T01:25:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/11/03/octopress-comment-can-not-show-out-disqus-normally</id>
+    <content type="html"><![CDATA[<h5>Symptom</h5>
+
+<p>Sometimes once you did some change in config files in your octopress. Once deploy, sometimes the <code>disqus comment will not show out the normal page.</code> This is a cache issue since <code>CDN</code> will persist in the previous random code.</p>
+
+<h5>Workaround</h5>
+
+<p><code>Just browse your disqus permalink:</code>
+<a href="http://yourname.disqus.com/embed.js">http://yourname.disqus.com/embed.js</a></p>
+
+<p>This will be redirect to the right embed.js
+<a href="http://mediacdn.disqus.com/1320181223/build/system/embed.js">http://mediacdn.disqus.com/1320181223/build/system/embed.js</a></p>
+
+<h5>Cheers</h5>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[20111101 new coffee bean]]></title>
