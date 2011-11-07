@@ -73,15 +73,21 @@
         <lastmod>2011-11-05T18:49:57+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://vlpeng.github.com/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/
+        </loc>
+        <lastmod>2011-11-07T21:11:55+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://vlpeng.github.com/about/</loc>
         <lastmod>2011-11-06T00:25:01+08:00</lastmod>
     </url>
     <url>
         <loc>http://vlpeng.github.com/blog/archives/</loc>
-        <lastmod>2011-11-05T18:49:57+08:00</lastmod>
+        <lastmod>2011-11-07T21:11:55+08:00</lastmod>
     </url>
     <url>
         <loc>http://vlpeng.github.com/</loc>
-        <lastmod>2011-11-05T18:49:57+08:00</lastmod>
+        <lastmod>2011-11-07T21:11:55+08:00</lastmod>
     </url>
 </urlset>
