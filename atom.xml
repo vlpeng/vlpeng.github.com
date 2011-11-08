@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2011-11-09T03:02:47+08:00</updated>
+  <updated>2011-11-09T03:11:09+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -81,16 +81,17 @@ heroku logs</code></pre></noscript></div>
 <h4>開始跟你的hubot互動</h4>
 
 <p>hubot其實是居住在你的heroku裡面，只是它不像富士康員工會給你來有的沒的，郭董也因此幾年前開始了他的機器人大軍。所以<code>heroku logs</code>極其重要，主人一定得要透過這個log來確認你的hubot是否請假還是罷工；當然，你平常使用的gmail帳號，也一定要把hubot的gmail帳號加到主人的gtalk清單裡面。
-如果順利的話，你的hubot會給你來個自動上線，就像這樣，給它來個愛的鼓勵，認真且不罷工的hubot
-<a href="http://www.flickr.com/photos/vlpeng/6325961845/" title="hubot in gtalk by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6233/6325961845_a5a7302e03_s.jpg" width="75" height="75" alt="hubot in gtalk"></a>
-最後，hubot該工作了，給hubot下個指令吧！例如：</p>
+如果順利的話，你的hubot會給你來個自動上線，就像這樣
+<a href="http://www.flickr.com/photos/vlpeng/6325961845/" title="hubot in gtalk by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6233/6325961845_a5a7302e03_m.jpg" width="153" height="96" alt="hubot in gtalk"></a></p>
+
+<p>給它來個愛的鼓勵，認真且不罷工的hubot。最後，hubot該工作了，給hubot下個指令吧！例如：</p>
 
 <pre><code>* hubot image me lady gaga
 * hubot youtube me yahoo
 * hubot who is google
 </code></pre>
 
-<p>可愛吧，簡直就像是Siri的弟弟一樣，-只是姊姊要用罵的-，-弟弟要用敲的-，直接動手來鑄造一個你的hubot吧</p>
+<p>可愛吧，簡直就像是Siri的弟弟一樣，只是姊姊要用罵的，弟弟要用敲的，直接動手來鑄造一個你的hubot吧</p>
 
 <p>最後看看這些作者怎麼操作hubot吧！</p>
 
