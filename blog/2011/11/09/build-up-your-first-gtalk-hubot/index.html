@@ -5,14 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>RVM on MBA and Uninstall All Ruby Gems - </title>
+  <title>Build up your first gtalk hubot - </title>
   <meta name="author" content="Louis Peng">
 
   
-  <meta name="description" content="#RVM on Macbook air:
-sudo bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
-source .bash_profile
-type &hellip;">
+  <meta name="description" content="寫這篇的同時，要先感謝一堆人，也因為最近看到很多人對Siri的瘋狂，忍不住想直接造個機器人來玩玩，但是，其中最大的靈感要算是來自於Xdite的CoffeeScript 還可以用來做什麼？ &#8211; Hubot，還有其他被我煩了將近一天的神佛們，他們是：
+@liangzan; @atmos &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +19,7 @@ type &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems">
+  <link rel="canonical" href="http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -118,7 +116,7 @@ type &hellip;">
   
   <header>
     
-      <h1 class="entry-title">RVM on MBA and Uninstall All Ruby Gems</h1>
+      <h1 class="entry-title">Build Up Your First Gtalk Hubot</h1>
     
     
       <p class="meta">
@@ -129,7 +127,7 @@ type &hellip;">
 
   
 
-<time datetime="2011-10-27T23:35:00+08:00" pubdate>Oct 27<span>th</span>, 2011</time>
+<time datetime="2011-11-09T02:01:00+08:00" pubdate>Nov 9<span>th</span>, 2011</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -138,22 +136,88 @@ type &hellip;">
   </header>
 
 
-<div class="entry-content"><div><script src='https://gist.github.com/1319867.js?file='></script>
-<noscript><pre><code>#RVM on Macbook air:
-sudo bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
-source .bash_profile
-type rvm | head -1
-rvm -v
-rvm requirements
-rvm install 1.9.2
-rvm gemset create rails311
-rvm gemset use rails311
-gem install rails bundle rake --no-rdoc --no-ri
-rvm use ruby-1.9.2-p290@rails311 --default
+<div class="entry-content"><p>寫這篇的同時，要先感謝一堆人，也因為最近看到很多人對Siri的瘋狂，忍不住想直接造個機器人來玩玩，但是，其中最大的靈感要算是來自於Xdite的<a href="http://blog.xdite.net/posts/2011/10/27/coffeescript-nodejs-hubot/">CoffeeScript 還可以用來做什麼？ &#8211; Hubot</a>，還有其他被我煩了將近一天的神佛們，他們是：
+@liangzan; @atmos; @holman 和@thetombell，Tom Bell更是佛心來的，寫了一支<a href="https://hubot-factory.herokuapp.com/">機器人工廠</a>，<code>謎之音，可能他被ㄌㄨˊ到了一個極限，乾脆弄個機器人工廠出來，呵呵。</code>
+開始鑄造您第一個hubot機器人吧，開工囉！</p>
+
+<h4>首先要準備好：</h4>
+
+<p>以下這些是無法偷懶的，要不就用<a href="https://hubot-factory.herokuapp.com/">機器人工廠</a>來鑄造hubot，否則還是得要按部就班來做。</p>
+
+<pre><code>* git core
+* ruby
+* heroku(要註冊)
+* gtalk(要註冊)
+* node &amp; npm
+* campfire(這是hubot最基本的工作)
+</code></pre>
+
+<h4>動工：</h4>
+
+<div><script src='https://gist.github.com/1348650.js?file='></script>
+<noscript><pre><code>wget https://github.com/downloads/github/hubot/hubot-1.1.9.tar.gz
+tar zxvf hubot-*.tar.gz
+cd hubot
+vim Procfile
+app: bin/hubot -a gtalk -n Hubot
+vim bin/hubot
+#npm install
+#heroku logs will be more silence the error if remove the npm install from bin/hubot
+
+git init
+git add .
+git commit -m &quot;Initial commit&quot;
+heroku create --stack cedar
+git push heroku master
+heroku ps:scale app=1
+heroku addons:add redistogo:nano
+heroku config:add HUBOT_GTALK_USERNAME=&quot;example@domain.com&quot; HUBOT_GTALK_PASSWORD=&quot;account password&quot;
+heroku ps
+heroku logs</code></pre></noscript></div>
 
 
-#How to uninstall all local gem:
-gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></noscript></div>
+<h4>Hubot Adapters</h4>
+
+<p>這個是有關你如何幫你的hubot選職業類別，目前有支援的有：</p>
+
+<pre><code>* Campfire
+* Email
+* Flowdock
+* GroupMe
+* HipChat
+* IRC
+* Shell
+* Talker
+* Twilio
+* Twitter
+* XMPP
+* Gtalk
+</code></pre>
+
+<p>詳細請參考<a href="https://github.com/github/hubot/wiki">這裡</a></p>
+
+<h4>開始跟你的hubot互動</h4>
+
+<p>hubot其實是居住在你的heroku裡面，只是它不像富士康員工會給你來有的沒的，郭董也因此幾年前開始了他的機器人大軍。所以<code>heroku logs</code>極其重要，主人一定得要透過這個log來確認你的hubot是否請假還是罷工；當然，你平常使用的gmail帳號，也一定要把hubot的gmail帳號加到主人的gtalk清單裡面。
+如果順利的話，你的hubot會給你來個自動上線，就像這樣，給它來個愛的鼓勵，認真且不罷工的hubot
+<a href="http://www.flickr.com/photos/vlpeng/6325961845/" title="hubot in gtalk by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6233/6325961845_a5a7302e03_s.jpg" width="75" height="75" alt="hubot in gtalk"></a>
+最後，hubot該工作了，給hubot下個指令吧！例如：</p>
+
+<pre><code>* hubot image me lady gaga
+* hubot youtube me yahoo
+* hubot who is google
+</code></pre>
+
+<p>可愛吧，簡直就像是Siri的弟弟一樣，-只是姊姊要用罵的-，-弟弟要用敲的-，直接動手來鑄造一個你的hubot吧</p>
+
+<p>最後看看這些作者怎麼操作hubot吧！</p>
+
+<iframe src="http://player.vimeo.com/video/18378673?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+<hr />
+
+<iframe src="http://player.vimeo.com/video/31314259?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="402" height="241" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
 
 </div>
 
@@ -172,12 +236,12 @@ gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></nosc
 
   
 
-<time datetime="2011-10-27T23:35:00+08:00" pubdate>Oct 27<span>th</span>, 2011</time>
+<time datetime="2011-11-09T02:01:00+08:00" pubdate>Nov 9<span>th</span>, 2011</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/rvm/'>RVM</a>
+    <a class='category' href='/blog/categories/heroku/'>heroku</a>, <a class='category' href='/blog/categories/hubot/'>hubot</a>, <a class='category' href='/blog/categories/nodejs/'>nodejs</a>
   
 </span>
 
@@ -186,7 +250,7 @@ gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></nosc
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems/" data-via="vlpeng" data-counturl="http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot/" data-via="vlpeng" data-counturl="http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -199,10 +263,8 @@ gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></nosc
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/10/15/vlpeng-twitter-cloud/" title="Previous Post: Vlpeng Twitter Cloud">&laquo; Vlpeng Twitter Cloud</a>
+        <a class="basic-alignment left" href="/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/" title="Previous Post: A Cool CSS of Typeset Style in your octopress header">&laquo; A Cool CSS of Typeset Style in your octopress header</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2011/10/28/yong-sinatrajian-zhi-gao-xiao-neng-yu-gao-zi-ding-xing-de-xi-tong-rubyconf-taiwan-2011/" title="next Post: 用Sinatra建置高效能與高自訂性的系統 - RubyConf Taiwan 2011">用Sinatra建置高效能與高自訂性的系統 - RubyConf Taiwan 2011 &raquo;</a>
       
     </p>
   </footer>
@@ -292,8 +354,8 @@ gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></nosc
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems';
-        var disqus_url = 'http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems';
+        var disqus_identifier = 'http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot';
+        var disqus_url = 'http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot';
         var disqus_script = 'embed.js';
       
     (function () {

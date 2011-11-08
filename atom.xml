@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2011-11-07T21:13:06+08:00</updated>
+  <updated>2011-11-09T03:02:47+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -12,6 +12,97 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Build up your first gtalk hubot]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot/"/>
+    <updated>2011-11-09T02:01:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/11/09/build-up-your-first-gtalk-hubot</id>
+    <content type="html"><![CDATA[<p>寫這篇的同時，要先感謝一堆人，也因為最近看到很多人對Siri的瘋狂，忍不住想直接造個機器人來玩玩，但是，其中最大的靈感要算是來自於Xdite的<a href="http://blog.xdite.net/posts/2011/10/27/coffeescript-nodejs-hubot/">CoffeeScript 還可以用來做什麼？ &#8211; Hubot</a>，還有其他被我煩了將近一天的神佛們，他們是：
+@liangzan; @atmos; @holman 和@thetombell，Tom Bell更是佛心來的，寫了一支<a href="https://hubot-factory.herokuapp.com/">機器人工廠</a>，<code>謎之音，可能他被ㄌㄨˊ到了一個極限，乾脆弄個機器人工廠出來，呵呵。</code>
+開始鑄造您第一個hubot機器人吧，開工囉！</p>
+
+<h4>首先要準備好：</h4>
+
+<p>以下這些是無法偷懶的，要不就用<a href="https://hubot-factory.herokuapp.com/">機器人工廠</a>來鑄造hubot，否則還是得要按部就班來做。</p>
+
+<pre><code>* git core
+* ruby
+* heroku(要註冊)
+* gtalk(要註冊)
+* node &amp; npm
+* campfire(這是hubot最基本的工作)
+</code></pre>
+
+<h4>動工：</h4>
+
+<div><script src='https://gist.github.com/1348650.js?file='></script>
+<noscript><pre><code>wget https://github.com/downloads/github/hubot/hubot-1.1.9.tar.gz
+tar zxvf hubot-*.tar.gz
+cd hubot
+vim Procfile
+app: bin/hubot -a gtalk -n Hubot
+vim bin/hubot
+#npm install
+#heroku logs will be more silence the error if remove the npm install from bin/hubot
+
+git init
+git add .
+git commit -m &quot;Initial commit&quot;
+heroku create --stack cedar
+git push heroku master
+heroku ps:scale app=1
+heroku addons:add redistogo:nano
+heroku config:add HUBOT_GTALK_USERNAME=&quot;example@domain.com&quot; HUBOT_GTALK_PASSWORD=&quot;account password&quot;
+heroku ps
+heroku logs</code></pre></noscript></div>
+
+
+<h4>Hubot Adapters</h4>
+
+<p>這個是有關你如何幫你的hubot選職業類別，目前有支援的有：</p>
+
+<pre><code>* Campfire
+* Email
+* Flowdock
+* GroupMe
+* HipChat
+* IRC
+* Shell
+* Talker
+* Twilio
+* Twitter
+* XMPP
+* Gtalk
+</code></pre>
+
+<p>詳細請參考<a href="https://github.com/github/hubot/wiki">這裡</a></p>
+
+<h4>開始跟你的hubot互動</h4>
+
+<p>hubot其實是居住在你的heroku裡面，只是它不像富士康員工會給你來有的沒的，郭董也因此幾年前開始了他的機器人大軍。所以<code>heroku logs</code>極其重要，主人一定得要透過這個log來確認你的hubot是否請假還是罷工；當然，你平常使用的gmail帳號，也一定要把hubot的gmail帳號加到主人的gtalk清單裡面。
+如果順利的話，你的hubot會給你來個自動上線，就像這樣，給它來個愛的鼓勵，認真且不罷工的hubot
+<a href="http://www.flickr.com/photos/vlpeng/6325961845/" title="hubot in gtalk by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6233/6325961845_a5a7302e03_s.jpg" width="75" height="75" alt="hubot in gtalk"></a>
+最後，hubot該工作了，給hubot下個指令吧！例如：</p>
+
+<pre><code>* hubot image me lady gaga
+* hubot youtube me yahoo
+* hubot who is google
+</code></pre>
+
+<p>可愛吧，簡直就像是Siri的弟弟一樣，-只是姊姊要用罵的-，-弟弟要用敲的-，直接動手來鑄造一個你的hubot吧</p>
+
+<p>最後看看這些作者怎麼操作hubot吧！</p>
+
+<iframe src="http://player.vimeo.com/video/18378673?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+
+<hr />
+
+<iframe src="http://player.vimeo.com/video/31314259?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="402" height="241" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Cool CSS of Typeset Style in your octopress header]]></title>
@@ -38,7 +129,7 @@
 
 <h3>更改背景顏色</h3>
 
-<p><code>這我個人的</code></p>
+<p><code>這我個人的，僅供參考</code></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sass/_override.scss</span></code></pre></td></tr></table></div></figure>
