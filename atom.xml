@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2011-11-12T01:18:22+08:00</updated>
+  <updated>2011-11-14T15:23:50+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -190,6 +190,10 @@ heroku logs</code></pre></noscript></div>
     <content type="html"><![CDATA[<h5>Symptom</h5>
 
 <p>Sometimes once you did some change in config files in your octopress. Once deploy, sometimes the <code>disqus comment will not show out the normal page.</code> This is a cache issue since <code>CDN</code> will persist in the previous random code.</p>
+
+<h6>Refer <a href="http://docs.disqus.com/help/14/">here</a></h6>
+
+<blockquote><p>If you&#8217;re experiencing identifier conflict on your site, <a href="http://disqus.com/support">contact us</a> with links to two pages sharing the same comments.</p></blockquote>
 
 <h5>Workaround</h5>
 
