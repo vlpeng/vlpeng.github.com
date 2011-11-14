@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2011-11-14T15:23:50+08:00</updated>
+  <updated>2011-11-15T00:53:00+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zambia and Sidamo coffee bean]]></title>
+    <link href="http://vlpeng.github.com/blog/2011/11/15/zambia-and-sidamo-coffee-bean/"/>
+    <updated>2011-11-15T00:48:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2011/11/15/zambia-and-sidamo-coffee-bean</id>
+    <content type="html"><![CDATA[<h4>衣索比亞‧西達摩‧凱貝朵 Ethiopia Sidamo Kebado</h4>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6343421457/" title="2011-11-14 20.05.27.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6118/6343421457_48d3f3d451_b.jpg" width="1024" height="768" alt="2011-11-14 20.05.27.jpg"></a></p>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6344170914/" title="2011-11-14 20.38.42.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6120/6344170914_38746df5d3_b.jpg" width="1024" height="768" alt="2011-11-14 20.38.42.jpg"></a></p>
+
+<hr />
+
+<h4>尚比亞AA+  如碧禮莊園 Zambia Lupili Estate AA PLUS</h4>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6344170268/" title="2011-11-14 20.05.46.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6091/6344170268_9dd77eef0c_b.jpg" width="1024" height="768" alt="2011-11-14 20.05.46.jpg"></a></p>
+
+<p><a href="http://www.flickr.com/photos/vlpeng/6343423597/" title="2011-11-14 20.44.11.jpg by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6239/6343423597_79ff992b4c_b.jpg" width="1024" height="768" alt="2011-11-14 20.44.11.jpg"></a></p>
+
+<pre><code>一樣，杯測請見Disqus
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Build up your first gtalk hubot]]></title>
