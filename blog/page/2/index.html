@@ -9,7 +9,7 @@
   <meta name="author" content="Louis Peng">
 
   
-  <meta name="description" content="尼加拉瓜 聖胡安莊園 可可之河 耶加雪夫 G2 咖啡生豆 KOKE合作社 PWN G1 曼特寧 ">
+  <meta name="description" content="Symptom Sometimes once you did some change in config files in your octopress. Once deploy, sometimes the disqus comment will not show out the normal &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -114,6 +114,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/03/octopress-comment-can-not-show-out-disqus-normally/">Octopress Comment Can Not Show Out Disqus Normally</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2011-11-03T01:25:00+08:00" pubdate>Nov 3<span>rd</span>, 2011</time>
+        
+         | <a href="/blog/2011/11/03/octopress-comment-can-not-show-out-disqus-normally/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h5>Symptom</h5>
+
+<p>Sometimes once you did some change in config files in your octopress. Once deploy, sometimes the <code>disqus comment will not show out the normal page.</code> This is a cache issue since <code>CDN</code> will persist in the previous random code.</p>
+
+<h6>Refer <a href="http://docs.disqus.com/help/14/">here</a></h6>
+
+<blockquote><p>If you&#8217;re experiencing identifier conflict on your site, <a href="http://disqus.com/support">contact us</a> with links to two pages sharing the same comments.</p></blockquote>
+
+<h5>Workaround</h5>
+
+<p><code>Just browse your disqus permalink:</code>
+<a href="http://yourname.disqus.com/embed.js">http://yourname.disqus.com/embed.js</a></p>
+
+<p>This will be redirect to the right embed.js
+<a href="http://mediacdn.disqus.com/1320181223/build/system/embed.js">http://mediacdn.disqus.com/1320181223/build/system/embed.js</a></p>
+
+<h5>Cheers</h5>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -295,55 +344,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems/">RVM on MBA and Uninstall All Ruby Gems</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2011-10-27T23:35:00+08:00" pubdate>Oct 27<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div><script src='https://gist.github.com/1319867.js?file='></script>
-<noscript><pre><code>#RVM on Macbook air:
-sudo bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
-source .bash_profile
-type rvm | head -1
-rvm -v
-rvm requirements
-rvm install 1.9.2
-rvm gemset create rails311
-rvm gemset use rails311
-gem install rails bundle rake --no-rdoc --no-ri
-rvm use ruby-1.9.2-p290@rails311 --default
-
-
-#How to uninstall all local gem:
-gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></noscript></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -363,12 +363,16 @@ gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></nosc
 
 <section>
 <h1>Articles Category</h1>
-<span class='categories_tag'> <a href='/blog/categories/anonymous' style='font-size: 120.0%'>Anonymous(1)</a>  <a href='/blog/categories/coffee' style='font-size: 140.0%'>Coffee(2)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/custom-domain-name' style='font-size: 120.0%'>Custom-domain-name(1)</a>  <a href='/blog/categories/ddos' style='font-size: 120.0%'>Ddos(1)</a>  <a href='/blog/categories/disqus-' style='font-size: 120.0%'>Disqus,(1)</a>  <a href='/blog/categories/hacker' style='font-size: 120.0%'>Hacker(1)</a>  <a href='/blog/categories/heroku' style='font-size: 120.0%'>Heroku(1)</a>  <a href='/blog/categories/hubot' style='font-size: 120.0%'>Hubot(1)</a>  <a href='/blog/categories/node-js' style='font-size: 160.0%'>Node.js(3)</a>  <a href='/blog/categories/nodejs' style='font-size: 120.0%'>Nodejs(1)</a>  <a href='/blog/categories/octopress' style='font-size: 160.0%'>Octopress(3)</a>  <a href='/blog/categories/octopress' style='font-size: 120.0%'>Octopress(1)</a>  <a href='/blog/categories/ruby' style='font-size: 120.0%'>Ruby(1)</a>  <a href='/blog/categories/rvm' style='font-size: 120.0%'>Rvm(1)</a>  <a href='/blog/categories/sinatra' style='font-size: 120.0%'>Sinatra(1)</a>  <a href='/blog/categories/tumblr' style='font-size: 120.0%'>Tumblr(1)</a>  <a href='/blog/categories/tumblr-' style='font-size: 120.0%'>Tumblr,(1)</a>  <a href='/blog/categories/twitter' style='font-size: 120.0%'>Twitter(1)</a>  <a href='/blog/categories/zynga' style='font-size: 120.0%'>Zynga(1)</a> </span>
+<span class='categories_tag'> <a href='/blog/categories/anonymous' style='font-size: 120.0%'>Anonymous(1)</a>  <a href='/blog/categories/coffee' style='font-size: 120.0%'>Coffee(1)</a>  <a href='/blog/categories/coffee' style='font-size: 140.0%'>Coffee(2)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/custom-domain-name' style='font-size: 120.0%'>Custom-domain-name(1)</a>  <a href='/blog/categories/ddos' style='font-size: 120.0%'>Ddos(1)</a>  <a href='/blog/categories/disqus-' style='font-size: 120.0%'>Disqus,(1)</a>  <a href='/blog/categories/hacker' style='font-size: 120.0%'>Hacker(1)</a>  <a href='/blog/categories/heroku' style='font-size: 120.0%'>Heroku(1)</a>  <a href='/blog/categories/hubot' style='font-size: 120.0%'>Hubot(1)</a>  <a href='/blog/categories/node-js' style='font-size: 160.0%'>Node.js(3)</a>  <a href='/blog/categories/nodejs' style='font-size: 120.0%'>Nodejs(1)</a>  <a href='/blog/categories/octopress' style='font-size: 120.0%'>Octopress(1)</a>  <a href='/blog/categories/octopress' style='font-size: 160.0%'>Octopress(3)</a>  <a href='/blog/categories/ruby' style='font-size: 120.0%'>Ruby(1)</a>  <a href='/blog/categories/rvm' style='font-size: 120.0%'>Rvm(1)</a>  <a href='/blog/categories/sinatra' style='font-size: 120.0%'>Sinatra(1)</a>  <a href='/blog/categories/tumblr' style='font-size: 120.0%'>Tumblr(1)</a>  <a href='/blog/categories/tumblr-' style='font-size: 120.0%'>Tumblr,(1)</a>  <a href='/blog/categories/twitter' style='font-size: 120.0%'>Twitter(1)</a>  <a href='/blog/categories/zynga' style='font-size: 120.0%'>Zynga(1)</a> </span>
 </section>
 
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/12/11/arabica-coffee-bean-and-show-up/">Arabica coffee bean and show up</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2011/11/15/zambia-and-sidamo-coffee-bean/">Zambia and Sidamo coffee bean</a>
@@ -384,10 +388,6 @@ gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></nosc
     
       <li class="post">
         <a href="/blog/2011/11/05/anonymous-vs-mexican-zetas/">Anonymous vs Mexica Zetas</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/11/03/octopress-comment-can-not-show-out-disqus-normally/">Octopress comment can not show out Disqus normally</a>
       </li>
     
   </ul>
