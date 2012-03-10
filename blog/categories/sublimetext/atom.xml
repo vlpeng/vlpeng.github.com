@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: SublimeText | ]]></title>
+  <link href="http://vlpeng.github.com/blog/categories/sublimetext/atom.xml" rel="self"/>
+  <link href="http://vlpeng.github.com/"/>
+  <updated>2012-03-11T01:11:58+08:00</updated>
+  <id>http://vlpeng.github.com/</id>
+  <author>
+    <name><![CDATA[Louis Peng]]></name>
+    <email><![CDATA[vlpeng@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sublime Text與gist的完美結合]]></title>
+    <link href="http://vlpeng.github.com/blog/2012/03/10/sublime-textyu-gistde-wan-mei-jie-he/"/>
+    <updated>2012-03-10T23:52:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2012/03/10/sublime-textyu-gistde-wan-mei-jie-he</id>
+    <content type="html"><![CDATA[<p>心血來潮，看了nettuts的Sexy Code Snippet Management With Gists，發現，這不就是我要的菜嗎？一個強猛的gist IDE，平常的筆記總算有了好的歸宿，如此一來就可以本地寫筆記了。之前都沒想過好好整理gist，看了Jeffrey的介紹快速Tag的方式amazing，太棒了，這死也要裝的神器，而且在安裝package的時候也夠快，快哭哭了>_&lt;~~。</p>
+
+<ol>
+<li><p><strong>安裝</strong><a href="http://www.sublimetext.com/2">下載</a></p></li>
+<li><p><strong>設定</strong></p></li>
+</ol>
+
+
+<p>開啟Sublime Text2之後，然後點選View -> Show Console
+<img src="https://img.skitch.com/20120310-t1s3juuk881chf6mg5rph6pta.jpg" alt="" />
+在Console列輸入</p>
+
+<p><code>
+import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'
+</code>
+安裝完畢之後必須重啟Sublime Text2，如此就可以Shift + Command + p鍵入install開始安裝套件了，例如github, gist或是其他的plugin
+<img src="https://img.skitch.com/20120310-tsxy5tqx5dxsrgeu7q4txibx3i.jpg" alt="" /></p>
+
+<ol>
+<li><strong>與Gist完美結合</strong></li>
+</ol>
+
+
+<p>打開Gist之後，就可以透過字元過濾，快速把過去做過的筆記，全部拉出來，這真是Cool爆了 v(￣︶￣)y</p>
+
+<p><img src="https://img.skitch.com/20120310-xed4kdtae2s4ncp1g4f78ypgcy.jpg" alt="" /></p>
+]]></content>
+  </entry>
+  
+</feed>
