@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Zynga | ]]></title>
   <link href="http://vlpeng.github.com/blog/categories/zynga/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-07-05T20:04:09+08:00</updated>
+  <updated>2012-07-05T20:19:07+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -18,9 +18,7 @@
     <link href="http://vlpeng.github.com/blog/2011/10/12/zynga-project-z/"/>
     <updated>2011-10-12T19:00:00+08:00</updated>
     <id>http://vlpeng.github.com/blog/2011/10/12/zynga-project-z</id>
-    <content type="html"><![CDATA[<p>{% blockquote 36kr http://www.36kr.com/p/52294.html Zynga VS Facebook Project Z %}
-Evil Empire
-{% endblockquote %}</p>
+    <content type="html"><![CDATA[<p><blockquote><p>Evil Empire</p><footer><strong>36kr</strong><cite><a href='http://www.36kr.com/p/52294.html'>Zynga vs Facebook Project Z</a></cite></footer></blockquote></p>
 ]]></content>
   </entry>
   

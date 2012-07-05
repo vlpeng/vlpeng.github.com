@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | ]]></title>
   <link href="http://vlpeng.github.com/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-07-05T20:04:09+08:00</updated>
+  <updated>2012-07-05T20:19:07+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -29,18 +29,16 @@
 <h3>更改標頭header</h3>
 
 <p>改這支
-{% codeblock %}
-source/_includes/custom/header.html
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source/_includes/custom/header.html</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <hr />
 
 <h3>更改背景顏色</h3>
 
 <p><code>這我個人的，僅供參考</code>
-{% codeblock %}
-sass/_override.scss
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sass/_override.scss</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

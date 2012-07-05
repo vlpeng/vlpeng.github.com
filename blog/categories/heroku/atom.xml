@@ -4,7 +4,7 @@
   <title><![CDATA[Category: heroku | ]]></title>
   <link href="http://vlpeng.github.com/blog/categories/heroku/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-07-05T20:04:09+08:00</updated>
+  <updated>2012-07-05T20:19:07+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -36,7 +36,27 @@
 
 <h4>動工：</h4>
 
-<p>{% gist 1348650 %}</p>
+<p><div><script src='https://gist.github.com/1348650.js?file='></script>
+<noscript><pre><code>wget https://github.com/downloads/github/hubot/hubot-1.1.9.tar.gz
+tar zxvf hubot-*.tar.gz
+cd hubot
+vim Procfile
+app: bin/hubot -a gtalk -n Hubot
+vim bin/hubot
+#npm install
+#heroku logs will be more silence the error if remove the npm install from bin/hubot
+
+git init
+git add .
+git commit -m &quot;Initial commit&quot;
+heroku create --stack cedar
+git push heroku master
+heroku ps:scale app=1
+heroku addons:add redistogo:nano
+heroku config:add HUBOT_GTALK_USERNAME=&quot;example@domain.com&quot; HUBOT_GTALK_PASSWORD=&quot;account password&quot;
+heroku ps
+heroku logs</code></pre></noscript></div>
+</p>
 
 <h4>Hubot Adapters</h4>
 

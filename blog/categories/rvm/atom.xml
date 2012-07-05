@@ -4,7 +4,7 @@
   <title><![CDATA[Category: RVM | ]]></title>
   <link href="http://vlpeng.github.com/blog/categories/rvm/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-07-05T20:04:09+08:00</updated>
+  <updated>2012-07-05T20:19:07+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -18,7 +18,23 @@
     <link href="http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems/"/>
     <updated>2011-10-27T23:35:00+08:00</updated>
     <id>http://vlpeng.github.com/blog/2011/10/27/rvm-on-mba-and-uninstall-all-ruby-gems</id>
-    <content type="html"><![CDATA[<p>{% gist 1319867 %}</p>
+    <content type="html"><![CDATA[<p><div><script src='https://gist.github.com/1319867.js?file='></script>
+<noscript><pre><code>#RVM on Macbook air:
+sudo bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
+source .bash_profile
+type rvm | head -1
+rvm -v
+rvm requirements
+rvm install 1.9.2
+rvm gemset create rails311
+rvm gemset use rails311
+gem install rails bundle rake --no-rdoc --no-ri
+rvm use ruby-1.9.2-p290@rails311 --default
+
+
+#How to uninstall all local gem:
+gem list | cut -d&quot; &quot; -f1 | xargs gem uninstall -aIx</code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   

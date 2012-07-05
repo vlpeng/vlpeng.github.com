@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-07-05T20:04:01+08:00</updated>
+  <updated>2012-07-05T20:19:07+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -19,12 +19,12 @@
     <updated>2012-07-05T19:37:00+08:00</updated>
     <id>http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener</id>
     <content type="html"><![CDATA[<p>有點晚看到這個，Git.io: GitHub URL Shortener。起因是從chef-hacking那邊看到有人在chatroom聊到這個，趕緊dig一下怎麼玩法，原來是這麼簡單！！！
-就是curl的應用而已，太妙了。玩法如下：
-1. 確認Repository的URL，copy paste下來 <a href="https://github.com/vlpeng/vlpeng.github.com">https://github.com/vlpeng/vlpeng.github.com</a></p>
+就是curl的應用而已，太妙了。玩法如下：</p>
 
 <ol>
-<li><p>趕緊打開<strong>TotalTerminal</strong></p></li>
-<li><p>照著敲下面敲</p></li>
+<li>確認Repository的URL，copy paste下來 <a href="https://github.com/vlpeng/vlpeng.github.com">https://github.com/vlpeng/vlpeng.github.com</a></li>
+<li>趕緊打開<strong>TotalTerminal</strong></li>
+<li>照著敲下面敲</li>
 </ol>
 
 
