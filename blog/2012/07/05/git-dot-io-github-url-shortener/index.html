@@ -5,14 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>A Cool CSS of Typeset Style in your octopress header - </title>
+  <title>Git.io: GitHub URL Shortener - </title>
   <meta name="author" content="Louis Peng">
 
   
-  <meta name="description" content="好站： 無意間發現這鍋http://www.sciweavers.org/i2style
-然後就繼續做了下去…
-然後搭配Expresso，真是絕配，又強又猛 更改標頭header 改這支 1
-source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供參考 &hellip;">
+  <meta name="description" content="有點晚看到這個，Git.io: GitHub URL Shortener。起因是從chef-hacking那邊看到有人在chatroom聊到這個，趕緊dig一下怎麼玩法，原來是這麼簡單！！！
+就是curl的應用而已，太妙了。玩法如下：
+1. 確認Repository的URL，copy &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +20,7 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://vlpeng.github.com/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header">
+  <link rel="canonical" href="http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -120,7 +119,7 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
   
   <header>
     
-      <h1 class="entry-title">A Cool CSS of Typeset Style in Your Octopress Header</h1>
+      <h1 class="entry-title">Git.io: GitHub URL Shortener</h1>
     
     
       <p class="meta">
@@ -131,7 +130,7 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
 
   
 
-<time datetime="2011-11-07T20:38:00+08:00" pubdate>Nov 7<span>th</span>, 2011</time>
+<time datetime="2012-07-05T19:37:00+08:00" pubdate>Jul 5<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -140,30 +139,157 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
   </header>
 
 
-<div class="entry-content"><h3>好站：</h3>
+<div class="entry-content"><p>有點晚看到這個，Git.io: GitHub URL Shortener。起因是從chef-hacking那邊看到有人在chatroom聊到這個，趕緊dig一下怎麼玩法，原來是這麼簡單！！！
+就是curl的應用而已，太妙了。玩法如下：
+1. 確認Repository的URL，copy paste下來 <a href="https://github.com/vlpeng/vlpeng.github.com">https://github.com/vlpeng/vlpeng.github.com</a></p>
 
-<p>無意間發現這鍋<a href="http://www.sciweavers.org/i2style">http://www.sciweavers.org/i2style</a>
-然後就繼續做了下去…
-然後搭配Expresso，真是絕配，又強又猛</p>
+<ol>
+<li><p>趕緊打開<strong>TotalTerminal</strong></p></li>
+<li><p>照著敲下面敲</p></li>
+</ol>
 
-<hr />
-
-<h3>更改標頭header</h3>
-
-<p>改這支</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source/_includes/custom/header.html</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=https://github.com/vlpeng/vlpeng.github.com"</span></code></pre></td></tr></table></div></figure>
 
 
-<hr />
+<ol>
+<li>會得到：</li>
+</ol>
 
-<h3>更改背景顏色</h3>
-
-<p><code>這我個人的，僅供參考</code></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sass/_override.scss</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 201 Created
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:49:08 GMT
+</span><span class='line'>Status: 201 Created
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a
+</span><span class='line'>Location: http://git.io/SJ-SaQ
+</span><span class='line'>X-Runtime: 0.006652
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Content-Length: 0</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Location的冒號後面就是短網址囉Yahooooooo。</li>
+<li>當然也可以反過來</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io/SJ-SaQ</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>就會得到這樣</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HTTP/1.1 302 Found
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:51:38 GMT
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Status: 302 Found
+</span><span class='line'>Location: https://github.com/vlpeng/vlpeng.github.com
+</span><span class='line'>Content-Length: 0
+</span><span class='line'>X-Runtime: 0.002789
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>試試gist看看，也可以喔Yahoooooooooooo</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=https://gist.github.com/3053260"
+</span><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 201 Created
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:53:13 GMT
+</span><span class='line'>Status: 201 Created
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a
+</span><span class='line'>Location: http://git.io/AMv5eg
+</span><span class='line'>X-Runtime: 0.007890
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Content-Length: 0</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>如果這樣惡搞呢？當然就不行囉</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=http://octopress.org/docs/blogging/"
+</span><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 422 Unprocessable Entity
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:55:18 GMT
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Status: 422 Unprocessable Entity
+</span><span class='line'>Content-Length: 27
+</span><span class='line'>X-Runtime: 0.000833
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>一起歐森吧！！！！！</li>
+</ol>
 
 </div>
 
@@ -182,12 +308,12 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
 
   
 
-<time datetime="2011-11-07T20:38:00+08:00" pubdate>Nov 7<span>th</span>, 2011</time>
+<time datetime="2012-07-05T19:37:00+08:00" pubdate>Jul 5<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/css/'>css</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+    <a class='category' href='/blog/categories/github/'>github</a>
   
 </span>
 
@@ -196,7 +322,7 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vlpeng.github.com/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/" data-via="vlpeng" data-counturl="http://vlpeng.github.com/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener/" data-via="vlpeng" data-counturl="http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -209,10 +335,8 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/11/05/anonymous-vs-mexican-zetas/" title="Previous Post: Anonymous vs Mexica Zetas">&laquo; Anonymous vs Mexica Zetas</a>
+        <a class="basic-alignment left" href="/blog/2012/03/10/sublime-textyu-gistde-wan-mei-jie-he/" title="Previous Post: Sublime Text與gist的完美結合">&laquo; Sublime Text與gist的完美結合</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2011/11/09/build-up-your-first-gtalk-hubot/" title="next Post: Build up your first gtalk hubot">Build up your first gtalk hubot &raquo;</a>
       
     </p>
   </footer>
@@ -288,8 +412,8 @@ source/_includes/custom/header.html 更改背景顏色 這我個人的，僅供�
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://vlpeng.github.com/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header';
-        var disqus_url = 'http://vlpeng.github.com/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header';
+        var disqus_identifier = 'http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener';
+        var disqus_url = 'http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener';
         var disqus_script = 'embed.js';
       
     (function () {

@@ -4,7 +4,7 @@
   <title><![CDATA[]]></title>
   <link href="http://vlpeng.github.com/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-03-11T01:18:40+08:00</updated>
+  <updated>2012-07-05T20:04:01+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -12,6 +12,166 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Git.io: GitHub URL Shortener]]></title>
+    <link href="http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener/"/>
+    <updated>2012-07-05T19:37:00+08:00</updated>
+    <id>http://vlpeng.github.com/blog/2012/07/05/git-dot-io-github-url-shortener</id>
+    <content type="html"><![CDATA[<p>有點晚看到這個，Git.io: GitHub URL Shortener。起因是從chef-hacking那邊看到有人在chatroom聊到這個，趕緊dig一下怎麼玩法，原來是這麼簡單！！！
+就是curl的應用而已，太妙了。玩法如下：
+1. 確認Repository的URL，copy paste下來 <a href="https://github.com/vlpeng/vlpeng.github.com">https://github.com/vlpeng/vlpeng.github.com</a></p>
+
+<ol>
+<li><p>趕緊打開<strong>TotalTerminal</strong></p></li>
+<li><p>照著敲下面敲</p></li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=https://github.com/vlpeng/vlpeng.github.com"</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>會得到：</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 201 Created
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:49:08 GMT
+</span><span class='line'>Status: 201 Created
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a
+</span><span class='line'>Location: http://git.io/SJ-SaQ
+</span><span class='line'>X-Runtime: 0.006652
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Content-Length: 0</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Location的冒號後面就是短網址囉Yahooooooo。</li>
+<li>當然也可以反過來</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io/SJ-SaQ</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>就會得到這樣</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HTTP/1.1 302 Found
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:51:38 GMT
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Status: 302 Found
+</span><span class='line'>Location: https://github.com/vlpeng/vlpeng.github.com
+</span><span class='line'>Content-Length: 0
+</span><span class='line'>X-Runtime: 0.002789
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>試試gist看看，也可以喔Yahoooooooooooo</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=https://gist.github.com/3053260"
+</span><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 201 Created
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:53:13 GMT
+</span><span class='line'>Status: 201 Created
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a
+</span><span class='line'>Location: http://git.io/AMv5eg
+</span><span class='line'>X-Runtime: 0.007890
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Content-Length: 0</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>如果這樣惡搞呢？當然就不行囉</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=http://octopress.org/docs/blogging/"
+</span><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 422 Unprocessable Entity
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:55:18 GMT
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Status: 422 Unprocessable Entity
+</span><span class='line'>Content-Length: 27
+</span><span class='line'>X-Runtime: 0.000833
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>一起歐森吧！！！！！</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sublime Text與gist的完美結合]]></title>
@@ -532,15 +692,6 @@ blog.octopress.com</code></pre></noscript></div>
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[tumblr-We're Sorry]]></title>
-    <link href="http://vlpeng.github.com/blog/2011/10/12/tumblr-were-sorry/"/>
-    <updated>2011-10-12T11:09:00+08:00</updated>
-    <id>http://vlpeng.github.com/blog/2011/10/12/tumblr-were-sorry</id>
-    <content type="html"><![CDATA[<p><a href="http://www.flickr.com/photos/vlpeng/6236115143/" title="We're sorry by vlpeng, on Flickr"><img src="http://farm7.static.flickr.com/6053/6236115143_1a2031ba06_b.jpg" width="961" height="415" alt="We're sorry"></a></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: node.js | ]]></title>
   <link href="http://vlpeng.github.com/blog/categories/node-js/atom.xml" rel="self"/>
   <link href="http://vlpeng.github.com/"/>
-  <updated>2012-03-11T01:18:40+08:00</updated>
+  <updated>2012-07-05T20:04:09+08:00</updated>
   <id>http://vlpeng.github.com/</id>
   <author>
     <name><![CDATA[Louis Peng]]></name>
@@ -27,7 +27,9 @@
     <link href="http://vlpeng.github.com/blog/2011/10/14/timezone-caculator/"/>
     <updated>2011-10-14T15:17:00+08:00</updated>
     <id>http://vlpeng.github.com/blog/2011/10/14/timezone-caculator</id>
-    <content type="html"><![CDATA[<p><blockquote><p>Finding out the actual time difference between two places in the world is hard. There are online converters that can do that for you but their user experience sucks. I always wondered why someone wont fix this  until I ultimately decided to try myself.</p><footer><strong>Filip Hracek</strong><cite><a href='http://www.tmzns.com/'>Timezone Caculator</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Filip Hracek http://www.tmzns.com/ Timezone caculator %}
+Finding out the actual time difference between two places in the world is hard. There are online converters that can do that for you but their user experience sucks. I always wondered why someone wont fix this  until I ultimately decided to try myself.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   
@@ -36,7 +38,9 @@
     <link href="http://vlpeng.github.com/blog/2011/10/13/world-wide-map-in-html5/"/>
     <updated>2011-10-13T13:04:00+08:00</updated>
     <id>http://vlpeng.github.com/blog/2011/10/13/world-wide-map-in-html5</id>
-    <content type="html"><![CDATA[<p><blockquote><p>This site is recorded the world wide agendas.</p><footer><strong>Development Seed</strong><cite><a href='http://developmentseed.org'>World Wide Map and Agenda in Node.js</a></cite></footer></blockquote></p>
+    <content type="html"><![CDATA[<p>{% blockquote Development Seed http://developmentseed.org World wide map and agenda in Node.js %}
+This site is recorded the world wide agendas.
+{% endblockquote %}</p>
 ]]></content>
   </entry>
   

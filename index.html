@@ -9,7 +9,9 @@
   <meta name="author" content="Louis Peng">
 
   
-  <meta name="description" content="心血來潮，看了nettuts的Sexy Code Snippet Management With Gists，發現，這不就是我要的菜嗎？一個強猛的gist IDE，平常的筆記總算有了好的歸宿，如此一來就可以本地寫筆記了。之前都沒想過好好整理gist， &hellip;">
+  <meta name="description" content="有點晚看到這個，Git.io: GitHub URL Shortener。起因是從chef-hacking那邊看到有人在chatroom聊到這個，趕緊dig一下怎麼玩法，原來是這麼簡單！！！
+就是curl的應用而已，太妙了。玩法如下：
+1. 確認Repository的URL，copy &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -114,6 +116,190 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/05/git-dot-io-github-url-shortener/">Git.io: GitHub URL Shortener</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+  
+
+<time datetime="2012-07-05T19:37:00+08:00" pubdate>Jul 5<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/05/git-dot-io-github-url-shortener/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>有點晚看到這個，Git.io: GitHub URL Shortener。起因是從chef-hacking那邊看到有人在chatroom聊到這個，趕緊dig一下怎麼玩法，原來是這麼簡單！！！
+就是curl的應用而已，太妙了。玩法如下：
+1. 確認Repository的URL，copy paste下來 <a href="https://github.com/vlpeng/vlpeng.github.com">https://github.com/vlpeng/vlpeng.github.com</a></p>
+
+<ol>
+<li><p>趕緊打開<strong>TotalTerminal</strong></p></li>
+<li><p>照著敲下面敲</p></li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=https://github.com/vlpeng/vlpeng.github.com"</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>會得到：</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 201 Created
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:49:08 GMT
+</span><span class='line'>Status: 201 Created
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a
+</span><span class='line'>Location: http://git.io/SJ-SaQ
+</span><span class='line'>X-Runtime: 0.006652
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Content-Length: 0</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Location的冒號後面就是短網址囉Yahooooooo。</li>
+<li>當然也可以反過來</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io/SJ-SaQ</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>就會得到這樣</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>HTTP/1.1 302 Found
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:51:38 GMT
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Status: 302 Found
+</span><span class='line'>Location: https://github.com/vlpeng/vlpeng.github.com
+</span><span class='line'>Content-Length: 0
+</span><span class='line'>X-Runtime: 0.002789
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>試試gist看看，也可以喔Yahoooooooooooo</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=https://gist.github.com/3053260"
+</span><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 201 Created
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:53:13 GMT
+</span><span class='line'>Status: 201 Created
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a
+</span><span class='line'>Location: http://git.io/AMv5eg
+</span><span class='line'>X-Runtime: 0.007890
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Content-Length: 0</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>如果這樣惡搞呢？當然就不行囉</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://git.io -F "url=http://octopress.org/docs/blogging/"
+</span><span class='line'>HTTP/1.1 100 Continue
+</span><span class='line'>HTTP/1.1 422 Unprocessable Entity
+</span><span class='line'>Server: nginx/1.0.13
+</span><span class='line'>Date: Thu, 05 Jul 2012 11:55:18 GMT
+</span><span class='line'>Content-Type: text/html;charset=utf-8
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Status: 422 Unprocessable Entity
+</span><span class='line'>Content-Length: 27
+</span><span class='line'>X-Runtime: 0.000833
+</span><span class='line'>X-Node: gitio2
+</span><span class='line'>X-Revision: ed12847ba41557297b8ae9c296008ba56920fa9a</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>一起歐森吧！！！！！</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -380,63 +566,6 @@ heroku logs</code></pre></noscript></div>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/">A Cool CSS of Typeset Style in Your Octopress Header</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-  
-
-<time datetime="2011-11-07T20:38:00+08:00" pubdate>Nov 7<span>th</span>, 2011</time>
-        
-         | <a href="/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>好站：</h3>
-
-<p>無意間發現這鍋<a href="http://www.sciweavers.org/i2style">http://www.sciweavers.org/i2style</a>
-然後就繼續做了下去…
-然後搭配Expresso，真是絕配，又強又猛</p>
-
-<hr />
-
-<h3>更改標頭header</h3>
-
-<p>改這支</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source/_includes/custom/header.html</span></code></pre></td></tr></table></div></figure>
-
-
-<hr />
-
-<h3>更改背景顏色</h3>
-
-<p><code>這我個人的，僅供參考</code></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sass/_override.scss</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -454,12 +583,16 @@ heroku logs</code></pre></noscript></div>
 
 <section>
 <h1>Articles Category</h1>
-<span class='categories_tag'> <a href='/blog/categories/anonymous' style='font-size: 120.0%'>Anonymous(1)</a>  <a href='/blog/categories/coffee' style='font-size: 140.0%'>Coffee(2)</a>  <a href='/blog/categories/coffee' style='font-size: 120.0%'>Coffee(1)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/custom-domain-name' style='font-size: 120.0%'>Custom-domain-name(1)</a>  <a href='/blog/categories/ddos' style='font-size: 120.0%'>Ddos(1)</a>  <a href='/blog/categories/disqus-' style='font-size: 120.0%'>Disqus,(1)</a>  <a href='/blog/categories/github' style='font-size: 120.0%'>Github(1)</a>  <a href='/blog/categories/hacker' style='font-size: 120.0%'>Hacker(1)</a>  <a href='/blog/categories/heroku' style='font-size: 120.0%'>Heroku(1)</a>  <a href='/blog/categories/hubot' style='font-size: 120.0%'>Hubot(1)</a>  <a href='/blog/categories/node-js' style='font-size: 160.0%'>Node.js(3)</a>  <a href='/blog/categories/nodejs' style='font-size: 120.0%'>Nodejs(1)</a>  <a href='/blog/categories/octopress' style='font-size: 160.0%'>Octopress(3)</a>  <a href='/blog/categories/octopress' style='font-size: 120.0%'>Octopress(1)</a>  <a href='/blog/categories/ruby' style='font-size: 120.0%'>Ruby(1)</a>  <a href='/blog/categories/rvm' style='font-size: 120.0%'>Rvm(1)</a>  <a href='/blog/categories/sinatra' style='font-size: 120.0%'>Sinatra(1)</a>  <a href='/blog/categories/sublimetext' style='font-size: 120.0%'>Sublimetext(1)</a>  <a href='/blog/categories/tumblr' style='font-size: 120.0%'>Tumblr(1)</a>  <a href='/blog/categories/tumblr-' style='font-size: 120.0%'>Tumblr,(1)</a>  <a href='/blog/categories/twitter' style='font-size: 120.0%'>Twitter(1)</a>  <a href='/blog/categories/zynga' style='font-size: 120.0%'>Zynga(1)</a> </span>
+<span class='categories_tag'> <a href='/blog/categories/anonymous' style='font-size: 120.0%'>Anonymous(1)</a>  <a href='/blog/categories/coffee' style='font-size: 140.0%'>Coffee(2)</a>  <a href='/blog/categories/coffee' style='font-size: 120.0%'>Coffee(1)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/css' style='font-size: 120.0%'>Css(1)</a>  <a href='/blog/categories/custom-domain-name' style='font-size: 120.0%'>Custom-domain-name(1)</a>  <a href='/blog/categories/ddos' style='font-size: 120.0%'>Ddos(1)</a>  <a href='/blog/categories/disqus-' style='font-size: 120.0%'>Disqus,(1)</a>  <a href='/blog/categories/github' style='font-size: 120.0%'>Github(1)</a>  <a href='/blog/categories/github' style='font-size: 120.0%'>Github(1)</a>  <a href='/blog/categories/hacker' style='font-size: 120.0%'>Hacker(1)</a>  <a href='/blog/categories/heroku' style='font-size: 120.0%'>Heroku(1)</a>  <a href='/blog/categories/hubot' style='font-size: 120.0%'>Hubot(1)</a>  <a href='/blog/categories/node-js' style='font-size: 160.0%'>Node.js(3)</a>  <a href='/blog/categories/nodejs' style='font-size: 120.0%'>Nodejs(1)</a>  <a href='/blog/categories/octopress' style='font-size: 160.0%'>Octopress(3)</a>  <a href='/blog/categories/octopress' style='font-size: 120.0%'>Octopress(1)</a>  <a href='/blog/categories/ruby' style='font-size: 120.0%'>Ruby(1)</a>  <a href='/blog/categories/rvm' style='font-size: 120.0%'>Rvm(1)</a>  <a href='/blog/categories/sinatra' style='font-size: 120.0%'>Sinatra(1)</a>  <a href='/blog/categories/sublimetext' style='font-size: 120.0%'>Sublimetext(1)</a>  <a href='/blog/categories/tumblr' style='font-size: 120.0%'>Tumblr(1)</a>  <a href='/blog/categories/tumblr-' style='font-size: 120.0%'>Tumblr,(1)</a>  <a href='/blog/categories/twitter' style='font-size: 120.0%'>Twitter(1)</a>  <a href='/blog/categories/zynga' style='font-size: 120.0%'>Zynga(1)</a> </span>
 </section>
 
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/07/05/git-dot-io-github-url-shortener/">Git.io: GitHub URL Shortener</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/03/10/sublime-textyu-gistde-wan-mei-jie-he/">Sublime Text與gist的完美結合</a>
@@ -475,10 +608,6 @@ heroku logs</code></pre></noscript></div>
     
       <li class="post">
         <a href="/blog/2011/11/09/build-up-your-first-gtalk-hubot/">Build up your first gtalk hubot</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/11/07/a-cool-css-of-typeset-style-in-your-octopress-header/">A Cool CSS of Typeset Style in your octopress header</a>
       </li>
     
   </ul>
